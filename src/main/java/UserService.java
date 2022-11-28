@@ -24,7 +24,7 @@ public class UserService {
 
     public User validateLogin(String inputEmail, String inputPassword){
         for(User user : users){
-            if(user.getEmail().equals(inputEmail) && user.getPassword().equals(inputPassword)){
+            if(user.getEmail().equalsIgnoreCase(inputEmail) && user.getPassword().equals(inputPassword)){
                 return user;
             }
         }
